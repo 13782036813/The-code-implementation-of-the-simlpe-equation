@@ -1,4 +1,4 @@
-# Linear Regression with Least Squares Method
+# Linear Regression with the simple equation
 
 [![Python Version](https://img.shields.io/badge/python-3.6%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
