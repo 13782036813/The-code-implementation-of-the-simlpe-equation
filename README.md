@@ -2,19 +2,23 @@
 # And the Comparation with The Gredient Dencent
 
 <div align="center">
-  <img src="./pictures/logo.png" alt="Project Logo" width="200">
+  <img src="./code/pictures/logo.png" alt="Project Logo" width="200">
   <br>
   <p>基于最小二乘法的线性回归实现</p>
 </div>
 
 [![Python Version](https://img.shields.io/badge/python-3.6%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# 我的科技节作品
 
 ## 🎯 项目亮点
+### 课本中的知识复现
+高中数学必修2中提到的最小二乘法的代码实现。
 ### 创新性设计
 - **自动生成训练集**：自动生成用于线性回归所需要的训练集
 - **使用最小二乘法拟合线性回归**：利用最小二乘法直接求解出参数
 - **算法创新**：项目中有不少的算法创新，我将一一展示
+- **动态化展示**动态过程的梯度下降拟合，更直观凸显最小二乘法的高效
 
 ## 🔍 原理展示
 ### 数学推导可视化
@@ -49,8 +53,7 @@ $$
 |--------------------|-----------------|-------------------|
 | 拟合方式            | 梯度下降          | 最小二乘法       |
 | 可视化支持          | 无              | 实时拟合动画         |
-| 异常处理            | 无              | 自动数据校验系统     |
-| 计算复杂度          | O(n)            | O(1) 增量更新      |
+| 计算复杂度          | O(n)            | O(1)       |
 
 ### 核心技术突破
 1. **使用矩阵乘法算出参数**：
@@ -77,5 +80,7 @@ $$
 ### 梯度下降中的记录loss来调整学习率
 #### 如果\alpha太小
 <div align = "center">
-  <img src = "./pic">
+  <img src = "./code/pictures/太小.png">
+  <p>alpha太小</p>
+</div>
 
