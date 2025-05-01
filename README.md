@@ -65,10 +65,10 @@ $$
    w_hat = (xi_times_yi - n * x_mean * y_mean)/(xi_squared - n * (x_mean)**2)
    b_hat = y_mean - w_hat * x_mean
 3. **梯度下降中的优化策略**
-  1.使用矩阵乘法算梯度
+  ####1.使用矩阵乘法算梯度
    ```python
    dw = (1/m) * (y_pred - y) @ x
-  2.记录loss值用于调整学习率
+  ####2.记录loss值用于调整学习率
   ```python
      loss = (1/(2*m)) * np.sum((y_pred - y) ** 2)
      loss_history.append(loss)
