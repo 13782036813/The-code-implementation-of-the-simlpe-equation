@@ -28,7 +28,7 @@ $$
 1. 计算均值：
    $$\bar{x} = \frac{1}{n}\sum x_i,\quad \bar{y} = \frac{1}{n}\sum y_i$$
 2. 计算w：
-   $$ w = \frac{\sum_{i=0}^n(\bar{x_i}\bar{y_i}) - n\bar{x}\bar{y}}{\sum_{i=0}^n(\bar{x_i^2} - n\bar{x_i}^2)}
+   $$ w = \frac{\sum_{i=0}^n(\bar{x_i}\bar{y_i}) - n\bar{x}\bar{y}}{\sum_{i=0}^n(\bar{x_i^2} - n\bar{x_i}^2)}$$
 ![Derivation Process](./assets/derivation_animation.gif)
 
 ## 🚀 创新性实现
