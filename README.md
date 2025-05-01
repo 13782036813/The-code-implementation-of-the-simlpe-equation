@@ -98,30 +98,31 @@ $$
     ani = FuncAnimation(fig, update, frames=range(n_iterations),
                        interval=50, blit=True, repeat=True)
 
+
 ## 💻实现过程  
-###1.📄创建数据集
+1.📄创建数据集
 使用项目内置的traing_set_builder文件创建数据集
 <div align = 'center'>
   <img src = './code/pictures/Figure_1.png'>
   <p>数据集</p>
 </div>
-###2.🧮最小二乘法拟合
+2.🧮最小二乘法拟合
 <div align = 'center'>
   <img src = './code/pictures/最小二乘法拟合的直线.png'>
   <p>拟合结果</p>
 </div>
-###3.🔧梯度下降拟合
+3.🔧梯度下降拟合
 <div align = 'center'>
   <img src = './code/pictures/gredient_decent.png'>
   <p>拟合结果</p>
 </div>
-###4.🔬动态比较
-####在这里我又创建了一个更大的数据集
+4.🔬动态比较
+在这里我又创建了一个更大的数据集
 <div align = 'center'>
   <img src = './code/pictures/Comparasion.png'>
   <p>大数据集</p>
 </div>
-####动态比较
+动态比较
 <div align = 'center'>
   <img src = './code/pictures/repeat.png'>
   <p>动态比较</p>
