@@ -25,10 +25,20 @@ MINIMIZE \sum_{i=1}^{n}(y_i - (mx_i + b))^2
 $$
 
 #### 参数求解过程
-1. 计算均值：
-   $$\bar{x} = \frac{1}{n}\sum x_i,\quad \bar{y} = \frac{1}{n}\sum y_i$$
-2. 计算w：
-   $$ w = \frac{\sum\limits_{i=1}^n (x_i y_i) - n \cdot \bar{x} \cdot \bar{y}}{\sum\limits_{i=1}^n x_i^2 - n \cdot \bar{x}^2} $$
+    ```python
+    #最小二乘法(simple equation)
+    n = len(x)
+    x_mean = np.mean(x)
+    y_mean = np.mean(y)
+    # 这里我直接使用矩阵乘法简化了求和过程
+    # 最原始的使用for循环遍历，很低效，可读性也很差
+    # 其次是使用numpy的sum函数，效率高了很多
+    # 最后我想到用numpy的矩阵乘法，效率最高，可取性也最高！
+    xi_times_yi = x @ y
+    xi_squared = x @ x
+
+    w_hat = (xi_times_yi - n * x_mean * y_mean)/(xi_squared - n * (x_mean)**2)
+    b_hat = y_mean - w_hat * x_mean
    
 ![Derivation Process](./assets/derivation_animation.gif)
 
@@ -54,4 +64,12 @@ $$
    ```python
    w_hat = (xi_times_yi - n * x_mean * y_mean)/(xi_squared - n * (x_mean)**2)
    b_hat = y_mean - w_hat * x_mean
-  
+3. **梯度下降中的优化策略**
+  1.使用矩阵乘法算梯度
+   ```python
+   dw = (1/m) * (y_pred - y) @ x
+  2.记录loss值用于调整学习率
+  ```python
+     loss = (1/(2*m)) * np.sum((y_pred - y) ** 2)
+     loss_history.append(loss)
+
