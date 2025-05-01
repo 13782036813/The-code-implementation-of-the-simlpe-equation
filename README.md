@@ -1,4 +1,5 @@
 # Linear Regression with The Simple Equation
+# And the Comparation with The Gredient Dencent
 
 <div align="center">
   <img src="./pictures/logo.png" alt="Project Logo" width="200">
