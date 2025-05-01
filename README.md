@@ -44,7 +44,7 @@ $$
 
     w_hat = (xi_times_yi - n * x_mean * y_mean)/(xi_squared - n * (x_mean)**2)
     b_hat = y_mean - w_hat * x_mean
-   
+    ```
 ![Derivation Process](./assets/derivation_animation.gif)
 
 ## 🚀 创新性实现
@@ -64,6 +64,7 @@ $$
    # 最后我想到用numpy的矩阵乘法，效率最高，可取性也最高！
    xi_times_yi = x @ y
    xi_squared = x @ x
+   ```
 2. **最小二乘法算出参数**
    ```python
    w_hat = (xi_times_yi - n * x_mean * y_mean)/(xi_squared - n * (x_mean)**2)
@@ -76,6 +77,7 @@ $$
    -------------------------------------------
    loss = (1/(2*m)) * np.sum((y_pred - y) ** 2)
    loss_history.append(loss)
+   ```
 4.动态展示梯度下降过程
 使用FuncAnimation()函数实现
     ```python
@@ -85,19 +87,17 @@ $$
     current_w = w_history[frame]
     current_b = b_history[frame]
     line_gd.set_data(x, current_w * x + current_b)
-    
     # 绘制最小二乘线（保持固定）
     if frame == 0:
         line_ls.set_data(x, w_ls * x + b_ls)
-    
     # 更新损失曲线
     cost_line.set_data(np.arange(frame), loss_history[:frame])
     return line_gd, line_ls, cost_line
-
     # 创建动画
     ani = FuncAnimation(fig, update, frames=range(n_iterations),
-                       interval=50, blit=True, repeat=True)
-
+                    interval=50, blit=True, repeat=True)
+                    
+    ```
 
 ## 💻实现过程  
 1.📄创建数据集
@@ -148,4 +148,23 @@ $$
   <img src = './code/pictures/太大.png'>
   <p>$$\alpha太大$$</p>
 </div>
+
+
+# 🧪本地运行比较结果
+1.确保您的设备上有python环境
+[Python官网](https://www.python.org/)
+2.确保您的python安装了必要的库
+  ```python
+  pip install numpy matplotlib pandas
+  ```
+3.克隆项目
+  ```bash
+  git clone
+  ```
+4.运行
+ 确保您进入了code目录下
+ ```bash
+ python compartaor.py
+ ```
+
 
