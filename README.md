@@ -78,13 +78,18 @@ $$
    loss_history.append(loss)
 ## 😀经验分享
 ### 梯度下降中的记录loss来调整学习率
-#### 如果$$\alpha$$太小
+#### $$正常的\alpha$$
+<div align = 'center'>
+  <img src = './code/pictures/loss_history.png'>
+  <p>$$正常的\alpha$$</p>
+</div>
+#### $$如果\alpha太小$$
 <div align = "center">
   <img src = "./code/pictures/太小.png">
   <p>$$\alpha太小$$</p>
 </div>
 
-#### 如果$$\alpha$$太大
+#### $$如果\alpha太大$$
 <div align = 'center'>
   <img src = './code/pictures/太大.png'>
   <p>$$\alpha太大$$</p>
