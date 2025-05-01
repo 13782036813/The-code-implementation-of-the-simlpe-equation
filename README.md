@@ -29,28 +29,29 @@ $$
    $$\bar{x} = \frac{1}{n}\sum x_i,\quad \bar{y} = \frac{1}{n}\sum y_i$$
 2. 计算w：
    $$ w = \frac{\sum\limits_{i=1}^n (x_i y_i) - n \cdot \bar{x} \cdot \bar{y}}{\sum\limits_{i=1}^n x_i^2 - n \cdot \bar{x}^2} $$
+   
 ![Derivation Process](./assets/derivation_animation.gif)
 
 ## 🚀 创新性实现
 ### 与传统实现的对比
 | 功能                | 传统实现          | 本项目的创新        |
 |--------------------|-----------------|-------------------|
-| 计算方式            | 批量计算          | 增量式更新（支持流式数据）|
+| 拟合方式            | 梯度下降          | 最小二乘法       |
 | 可视化支持          | 无              | 实时拟合动画         |
-| 数值稳定性          | 基础实现          | 添加正则化项         |
 | 异常处理            | 无              | 自动数据校验系统     |
 | 计算复杂度          | O(n)            | O(1) 增量更新      |
 
 ### 核心技术突破
-1. **流式数据处理**：
+1. **使用矩阵乘法算出参数**：
    ```python
-   # 增量更新参数
-   def partial_fit(self, x, y):
-       self.n += 1
-       dx = x - self.mean_x
-       self.mean_x += dx / self.n
-       self.mean_y += (y - self.mean_y) / self.n
-       self.cov += dx * (y - self.mean_y)
-       self.var_x += dx * (x - self.mean_x)
-       self.slope = self.cov / self.var_x
-       self.intercept = self.mean_y - self.slope * self.mean_x
+   # 这里我直接使用矩阵乘法简化了求和过程
+   # 最原始的使用for循环遍历，很低效，可读性也很差
+   # 其次是使用numpy的sum函数，效率高了很多
+   # 最后我想到用numpy的矩阵乘法，效率最高，可取性也最高！
+   xi_times_yi = x @ y
+   xi_squared = x @ x
+2. **最小二乘法算出参数**
+   ```python
+   w_hat = (xi_times_yi - n * x_mean * y_mean)/(xi_squared - n * (x_mean)**2)
+   b_hat = y_mean - w_hat * x_mean
+  
