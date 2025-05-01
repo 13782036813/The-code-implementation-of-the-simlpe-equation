@@ -1,7 +1,7 @@
 # Linear Regression with The Simple Equation
 
 <div align="center">
-  <img src="./assets/logo.png" alt="Project Logo" width="200">
+  <img src="./pictures/logo.png" alt="Project Logo" width="200">
   <br>
   <p>基于最小二乘法的线性回归实现</p>
 </div>
