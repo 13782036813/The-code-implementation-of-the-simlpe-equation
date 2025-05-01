@@ -159,7 +159,7 @@ $$
   ```
 3.克隆项目
   ```bash
-  git clone
+  git clone https://github.com/13782036813/The-code-implementation-of-the-simlpe-equation-And-the-comparation-with-Gredient-Decent.git
   ```
 4.运行
  确保您进入了code目录下
