@@ -21,22 +21,14 @@
 对于数据点 $(x_i, y_i)$，我们寻找最佳拟合直线 $y = mx + b$，使得残差平方和最小：
 
 $$
-\MINIMIZE \sum_{i=1}^{n}(y_i - (mx_i + b))^2
+MINIMIZE \sum_{i=1}^{n}(y_i - (mx_i + b))^2
 $$
 
 #### 参数求解过程
 1. 计算均值：
    $$\bar{x} = \frac{1}{n}\sum x_i,\quad \bar{y} = \frac{1}{n}\sum y_i$$
-   
-2. 计算协方差：
-   $$Cov(x,y) = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{n-1}$$
-   
-3. 计算方差：
-   $$Var(x) = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
-   
-4. 最终解：
-   $$m = \frac{Cov(x,y)}{Var(x)},\quad b = \bar{y} - m\bar{x}$$
-
+2. 计算w：
+   $$ w = \frac{\sum_{i=0}^n(\bar{x_i}*\bar{y_i}) - n * \bar{x} * \bar{y}}{\sum_{i=0}^n(\bar{x_i^2} - n* \bar{x_i}^2)}
 ![Derivation Process](./assets/derivation_animation.gif)
 
 ## 🚀 创新性实现
