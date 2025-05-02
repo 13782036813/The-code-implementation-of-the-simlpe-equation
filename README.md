@@ -124,7 +124,7 @@ $$
 </div>
 动态比较
 <div align = 'center'>
-  <img src = './code/pictures/repeat.png'>
+  <img src = './animation.gif'>
   <p>动态比较</p>
 </div>
 
@@ -150,9 +150,10 @@ $$
 </div>
 
 
-# 🧪本地运行比较结果
+## 🧪本地运行比较
 1.确保您的设备上有python环境
 [Python官网](https://www.python.org/)
+
 2.确保您的python安装了必要的库
   ```python
   pip install numpy matplotlib pandas
