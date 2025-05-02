@@ -123,11 +123,7 @@ $$
   <p>大数据集</p>
 </div>
 动态比较
-<div align = 'center'>
-  <img src = './animation.gif'>
-  <p>动态比较</p>
-</div>
-
+![动态比较](animation.gif)
 
 ## 😀经验分享
 ### 梯度下降中的记录loss来调整学习率
